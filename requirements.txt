@@ -1,0 +1,56 @@
+# PyTorch.
+--find-links https://download.pytorch.org/whl/cu117/torch_stable.html
+torch==2.0.1+cu117
+torchaudio==2.0.1+cu117
+torchvision==0.15.2+cu117
+
+# Training.
+fschat @ git+https://github.com/lm-sys/FastChat.git@main
+transformers @ git+https://github.com/huggingface/transformers.git
+peft @ git+https://github.com/huggingface/peft.git
+accelerate @ git+https://github.com/huggingface/accelerate.git
+sentence-transformers @ git+https://https://github.com/UKPLab/sentence-transformers.git
+deepspeed==0.10.0
+bitsandbytes==0.38.1
+loralib==0.1.1
+tokenizers==0.13.3
+
+# Evaluation.
+wandb==0.15.4
+evaluate==0.4.0
+rouge-score==0.1.2
+
+# Visualisation.
+matplotlib==3.7.1
+seaborn==0.12.2  
+plotly==5.14.1
+kaleido==0.2.1
+wordcloud==1.9.1.1
+
+# Data.
+numpy==1.24.1
+pandas==1.5.3
+datasets==2.12.0
+huggingface-hub==0.14.1
+spacy==3.5.3
+fr_core_news_md @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.3.0/fr_core_news_md-3.3.0-py3-none-any.whl
+
+# APIs.
+langchain==0.0.235
+tiktoken==0.3.3
+openai==0.27.8
+anthropic==0.3.4
+cohere==4.15.0
+ai21==1.2.1
+aleph-alpha-client==3.1.0
+
+# Other.
+iso-639==0.4.5
+protobuf==3.20.3
+dataclasses==0.6
+wheel==0.40.0
+ipykernel==6.23.0
+einops==0.6.1
+tabulate==0.9.0
+nbformat==5.8.0
+more-itertools==9.1.0
