@@ -45,7 +45,7 @@ We use the popular retrieve-then-read pipeline, which first leverages a retrieve
 
 ### Retriever
 
-Our retriever relies on a lightweight [CamemBERT](https://huggingface.co/camembert-base)-based bi-encoder model, wich enables fast and effective retrieval.
+Our retriever relies on a lightweight [CamemBERT](https://huggingface.co/camembert-base)-based bi-encoder model, which enables fast and effective retrieval.
 
 ### Hard negatives
 
