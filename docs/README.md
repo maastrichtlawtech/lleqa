@@ -47,7 +47,7 @@ We use the popular retrieve-then-read pipeline, which first leverages a retrieve
 
 Our retriever relies on a lightweight [CamemBERT](https://huggingface.co/camembert-base)-based bi-encoder model, wich enables fast and effective retrieval.
 
-### Hard negatives
+#### Hard negatives
 
 The bi-encoder model is optimized using a contrastive learning strategy, which requires the inclusion of negative samples. Besides in-batch negatives, we sample hard negatives using two different systems: BM25 and DPR-based.
 
@@ -76,7 +76,7 @@ whose script comes with the following variables:
 * `SIM` (str, default="cos_sim"): similarity function for the question and article encoders (either "cos_sim" or "dot_product");
 * `NUM_NEG` (int, default=10): number of negatives to generate per query.
 
-### Training
+#### Training
 
 You can train the bi-encoder model by running:
 
@@ -104,7 +104,7 @@ whose script comes with the following variables:
 * `DO_TEST` (bool, default=True): whether to evaluate the model on the test set after training;
 * `DO_SAVE` (bool, default=True): whether to save the model after training.
 
-### Evaluation
+#### Evaluation
 
 You can evaluate the performance of a biencoder model on LLeQA by running:
 
@@ -133,7 +133,7 @@ whose script comes with the following variables:
 
 For our reader, we use a large language model (LLM) that we adapt to our task via two distinct learning strategies: *in-context learning*, wherein the model learns from instructions and a set of contextually provided examples; and *parameter-efficient finetuning*, where a small number of extra parameters are optimized on a downstream dataset while the base model's weights are quantized and remain unchanged.
 
-### In-context learning
+#### In-context learning
 
 You can evaluate the in-context performance of some LLMs on LLeQA test set by running:
 
@@ -154,7 +154,7 @@ whose script comes with the following variables:
 * `MAX_OUT_TOKENS` (int, default=350): maximum number of tokens to generate;
 * `MODELS` (list, default=["[vicuna-7b-v1.3](https://huggingface.co/lmsys/vicuna-7b-v1.3)", "[wizardLM-7B](https://huggingface.co/TheBloke/wizardLM-7B-HF)", "[tulu-7B](https://huggingface.co/TheBloke/tulu-7B-fp16)", "[guanaco-7B"](https://huggingface.co/TheBloke/guanaco-7B-HF)]): list of LLMs to evaluate.
 
-### Parameter-efficient finetuning
+#### Parameter-efficient finetuning
 
 You can efficiently finetune LLMs on LLeQA training set by running:
 
